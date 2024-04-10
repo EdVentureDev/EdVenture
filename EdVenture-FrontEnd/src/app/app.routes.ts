@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 export const routes: Routes = [
   { title: 'EdVenture | Home', path: '', component: HomeComponent },
+  { title: 'EdVenture | Home', path: 'home', component: HomeComponent },
   { title: 'EdVenture | About', path: 'about', component: AboutComponent },
   { title: 'EdVenture | Contact', path: 'contact', component: ContactComponent },
   { title: 'EdVenture | Page Not Found', path: '**', component: PageNotFoundComponent },

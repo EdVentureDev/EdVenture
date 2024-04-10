@@ -1,0 +1,87 @@
+.NavBarContainer{
+    padding: 5px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    backdrop-filter: blur(10px);
+    position: sticky;
+}
+
+.leftContainer{
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logoText{
+    font-family: var(--typeface-mono);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logoSquare{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    width: 34px;
+    height: 26px;
+    margin-right: 2px;
+}
+
+.icon{
+    color: white;
+}
+
+.navLinks{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.navLinks a, .rightContainer a{
+    font-family: var(--typeface-sans);
+    font-size: 14.3px;
+    font-weight: 400;
+    margin: 12px;
+    color: hsl(0, 0%, 60%);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navLinks a:hover, .rightContainer a:hover{
+    color: hsl(0, 0%, 70%);
+}
+
+.navLinks a.active{
+    color: hsl(0, 0%, 90%);
+}
+
+.rightContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.GetStartedBtn{
+    background-color: #32ff10;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.GetStartedBtn:hover{
+    background-color: #2eeb0b;
+}
+
