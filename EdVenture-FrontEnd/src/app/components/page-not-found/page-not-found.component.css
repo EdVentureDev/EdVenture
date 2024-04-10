@@ -1,0 +1,30 @@
+.pageNotFoundContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.pageNotFoundText {
+    font-size: 1.2em;
+    color: hsl(0, 0%, 50%);
+    margin-bottom: 20px;
+}
+
+.pageNotFoundBtn {
+    padding: 7px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+.pageNotFoundBtn:hover {
+    background-color: hsl(0, 0%, 90%);
+}
