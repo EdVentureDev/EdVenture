@@ -1,0 +1,79 @@
+.homeContainer{
+    height: 100vh;
+    margin: 0;
+}
+
+.backgroundImage img:nth-child(1){
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundImage img:nth-child(2){
+    height: auto;
+    position: absolute;
+    top: 100px;
+    right: 60px;
+    z-index: -1;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 52px;
+}
+
+.heroHeading{
+    font-family: var(--typeface-sans);
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 10px;
+
+}
+
+.heroText{
+    font-family: var(--typeface-sans);
+    font-weight: 400;
+    font-size: 18px;
+    color: hsl(0, 0%, 50%);
+}
+
+.heroButton{
+    display: flex;
+    margin-top: 20px;
+}
+
+.heroButton button{
+    font-family: var(--typeface-sans);
+    font-size: 18px;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+
+.GetStartedBtn{
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+.GetStartedBtn:hover{
+    background-color: hsl(0, 0%, 90%);
+}
+
+
+.loginBtn{
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.loginBtn:hover{
+    background-color: hsl(0, 0%, 10%);
+}
