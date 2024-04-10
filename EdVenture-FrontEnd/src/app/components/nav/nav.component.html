@@ -1,1 +1,25 @@
-<p>nav works!</p>
+<div class="NavBarContainer">
+    <div class="leftContainer">
+        <div class="logoContainer">
+            <div class="logoImage">
+                <div class="logoSquare">
+                    <span class="material-symbols-outlined">
+                        import_contacts
+                    </span>
+                </div>
+            </div>
+            <div class="logoText">EdVenture</div>
+        </div>
+    
+        <div class="navLinks">
+            <a routerLink="/home" routerLinkActive="active">Home</a>
+            <a routerLink="/about" routerLinkActive="active">About</a>
+            <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        </div>
+    </div>
+
+    <div class="rightContainer">
+        <button class="GetStartedBtn" routerLink="/register" routerLinkActive="active">Get Started</button>
+        <a routerLink="/login">Sign in</a>
+    </div>
+</div>
