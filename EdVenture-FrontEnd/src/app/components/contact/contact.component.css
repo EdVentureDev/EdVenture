@@ -1,50 +1,58 @@
-#contacting{
+.contactContainer {
+    min-height: 100vh;
+}
+
+#contacting {
     align-items: center;
 }
-#contact_us{
+
+#contact_us {
 
 
-position: absolute;
-width: 50%;
-height: 47px;
-left: 40px;
-top: 141px;
+    position: absolute;
+    width: 50%;
+    height: 47px;
+    left: 40px;
+    top: 141px;
 
-font-family: var(--typeface-sans);
-font-style: normal;
-font-weight: 600;
-font-size: 50px;
-line-height: 47px;
-/* identical to box height */
+    font-family: var(--typeface-sans);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 47px;
+    /* identical to box height */
 
-color: #FFFFFF;
-
-
-}
-#contact_para{
-    
-   
-position: absolute;
-width: 630px;
-height: 45px;
-left: 40px;
-top: 200px;
-
-font-family: var(--typeface-sans);
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 17px;
-
-color: #808080;
-
+    color: #FFFFFF;
 
 
 }
-#contact_form{
+
+#contact_para {
+
+
+    position: absolute;
+    width: 630px;
+    height: 45px;
+    left: 40px;
+    top: 200px;
+
+    font-family: var(--typeface-sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+
+    color: #808080;
+
+
+
+}
+
+#contact_form {
     position: absolute;
     width: 50%;
 }
+
 #name {
     box-sizing: border-box;
     position: absolute;
@@ -58,17 +66,18 @@ color: #808080;
     color: #FFFFFF;
     padding: 10px;
 }
-#email{
-    
+
+#email {
+
 
     box-sizing: border-box;
-    
+
     position: absolute;
     width: 583px;
     height: 87px;
     left: 40px;
     top: 388px;
-    
+
     background: #000000;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
@@ -76,25 +85,27 @@ color: #808080;
     padding: 10px;
 
 }
-#message{
-    
+
+#message {
+
 
     box-sizing: border-box;
-    
+
     position: absolute;
     width: 584px;
     height: 284px;
     left: 40px;
     top: 491px;
-    
+
     background: #000000;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
     color: #FFFFFF;
     padding: 10px;
-    
+
 }
-#submit{
+
+#submit {
     /* Rectangle 4 */
 
     position: absolute;
@@ -103,11 +114,12 @@ color: #808080;
     left: 40px;
     top: 799px;
     font-size: 20px;
-    
+
     background: #32FF10;
     border-radius: 7px;
 
 }
+
 #email::placeholder {
     font-size: 16px;
 }
@@ -115,6 +127,7 @@ color: #808080;
 #message::placeholder {
     font-size: 16px;
 }
+
 #name::placeholder {
     font-size: 16px;
 }
@@ -129,18 +142,18 @@ color: #808080;
     height: 160px;
     left: 659px;
     top: 284px;
-    margin-left:20px;
+    margin-left: 20px;
     padding-top: 25px;
-    
+
     background: rgba(26, 26, 26, 0.26);
     border: 1px solid #808080;
     backdrop-filter: blur(12.3px);
     border-radius: 10px;
-    
+
 }
 
 #found_bug {
-    position: relative; 
+    position: relative;
     width: 160px;
     height: 23px;
     font-family: var(--typeface-sans);
@@ -153,7 +166,7 @@ color: #808080;
 }
 
 #found_bug_body {
-    position: relative; 
+    position: relative;
     width: 530px;
     height: 56px;
     top: 10px;
@@ -165,10 +178,11 @@ color: #808080;
     letter-spacing: 0.05em;
     color: #E6E6E6;
 }
-#icons{
- 
+
+#icons {
+
     box-sizing: border-box;
-    
+
     position: absolute;
     width: 590px;
     height: 99px;
@@ -180,13 +194,17 @@ color: #808080;
     backdrop-filter: blur(12.3px);
     border-radius: 10px;
 }
-#icon1, #icon2,#icon3{
+
+#icon1,
+#icon2,
+#icon3 {
     border-radius: 50%;
 }
+
 #appreciation {
 
     box-sizing: border-box;
-    
+
     position: absolute;
     width: 590px;
     height: 66px;
@@ -194,7 +212,7 @@ color: #808080;
     top: 644px;
     margin-left: 20px;
     padding: 10px;
-    
+
     background: #000000;
     border: 1px solid #808080;
     border-radius: 10px;
@@ -202,8 +220,8 @@ color: #808080;
 }
 
 #appreciation_body {
-    position: static; 
-    width: 550px; 
+    position: static;
+    width: 550px;
     height: 30px;
     font-family: var(--typeface-sans);
     font-style: normal;
@@ -212,9 +230,10 @@ color: #808080;
     line-height: 15px;
     color: #CCCCCC;
 }
-#designs1{
+
+#designs1 {
     position: absolute;
-    
+
     width: 75px;
     height: 65px;
     left: 885.52px;
@@ -223,11 +242,13 @@ color: #808080;
     transform: rotate(-23.01deg);
 
 }
-#designs2{
 
-position: absolute;
-width: 89px;
-height: 78px;
-left: 1111.32px;
-top: 500px;
-transform: rotate(-65.07deg);
+#designs2 {
+
+    position: absolute;
+    width: 89px;
+    height: 78px;
+    left: 1111.32px;
+    top: 500px;
+    transform: rotate(-65.07deg);
+}
