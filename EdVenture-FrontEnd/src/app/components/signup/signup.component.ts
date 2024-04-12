@@ -53,6 +53,17 @@ export class SignupComponent {
     onSubmitOtp(form: NgForm) {
         if (form.valid) {
             const { email, otp } = form.value;
+            this.step = 4;
+            // Send a request to the server to verify the OTP
+        } else {
+            console.error('Form is invalid');
+        }
+    }
+    
+    onCollege(form: NgForm) {
+        if (form.valid) {
+            const { college } = form.value;
+            this.step = 5;
             // Send a request to the server to verify the OTP
         } else {
             console.error('Form is invalid');

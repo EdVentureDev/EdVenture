@@ -158,3 +158,26 @@
     color: hsl(0, 0%, 50%);
     user-select: none;
 }
+
+.rightContainer form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 4px;
+    font-size: 16px;
+    color: hsl(0, 0%, 50%);
+    background-color: black;
+    appearance: none;
+    outline: none;
+    margin-top: 30px;
+}
+
+.rightContainer form select:focus {
+    border-color: #3f51b5; /* Change this to the color you want when the select is focused */
+}
+
+.rightContainer form p{
+    font-size: 12px;
+    color: hsl(0, 0%, 50%);
+    margin-top: 10px;
+}

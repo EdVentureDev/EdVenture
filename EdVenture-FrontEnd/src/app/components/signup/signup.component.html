@@ -24,7 +24,8 @@
 
         <div class="rightContainer" *ngIf="step === 1">
             <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
-                <input name="firstName" ngModel #firstName="ngModel" type="text" placeholder="First Name" class="firstName">
+                <input name="firstName" ngModel #firstName="ngModel" type="text" placeholder="First Name"
+                    class="firstName">
                 <input name="lastName" ngModel #lastName="ngModel" type="text" placeholder="Last Name" class="lastName">
                 <input name="username" ngModel #username="ngModel" type="text" placeholder="Username">
                 <div class="password-container">
@@ -82,7 +83,7 @@
             </div>
 
             <div class="heading">
-                Enter the OTP.
+                Verify your email.
             </div>
 
             <div class="subText">
@@ -93,6 +94,68 @@
             <form #otpForm="ngForm" (ngSubmit)="onSubmitOtp(otpForm)">
                 <input name="otp" ngModel #otp="ngModel" type="password" placeholder="Enter OTP">
                 <button type="submit" [disabled]="!otpForm.valid">Verify</button>
+            </form>
+        </div>
+
+        <!-- step 4 -->
+        <div class="leftContainer" *ngIf="step === 4">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
+
+            <div class="heading">
+                Choose your college.
+            </div>
+
+            <div class="subText">
+                Already have an account? <a routerLink="/login"> Login</a>
+            </div>
+        </div>
+        <div class="rightContainer" *ngIf="step === 4">
+            <form #otpForm="ngForm" (ngSubmit)="onCollege(otpForm)">
+                <select name="college" ngModel #college="ngModel">
+                    <option value="" disabled selected>Choose a college</option>
+                    <option value="Lovely professional university (phagwara)">Lovely professional university (phagwara)
+                    </option>
+                </select>
+                <button type="submit" [disabled]="!otpForm.valid">Next</button>
+            </form>
+        </div>
+
+        <!-- step 4 -->
+        <div class="leftContainer" *ngIf="step === 5">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
+
+            <div class="heading">
+                Verify your college.
+            </div>
+
+            <div class="subText">
+                Already have an account? <a routerLink="/login"> Login</a>
+            </div>
+        </div>
+        <div class="rightContainer" *ngIf="step === 5">
+            <form #otpForm="ngForm" (ngSubmit)="onCollege(otpForm)">
+                <input name="regNo" ngModel #regNo="ngModel" type="text" placeholder="Enter Registration Number">
+                <input name="umsPass" ngModel #umsPass="ngModel" type="password" placeholder="Enter UMS Password">
+                <p>* We only store your Registration number. UMS Password is just for Verification.</p>
+                <button type="submit" [disabled]="!otpForm.valid">Sign Up</button>
             </form>
         </div>
     </div>
