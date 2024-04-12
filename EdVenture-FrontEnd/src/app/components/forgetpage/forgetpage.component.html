@@ -84,7 +84,7 @@
                 </div>
                 <input name="confirmPassword" ngModel #confirmPassword="ngModel" type="password"
                     placeholder="Confirm Password" [pattern]="password.value">
-                <button type="submit" [disabled]="!signupForm.valid">Update</button>
+                <button type="submit" [disabled]="!signupForm.valid" routerLink="/login">Update</button>
             </form>
         </div>
     </div>
