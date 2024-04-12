@@ -23,14 +23,48 @@ export class SignupComponent {
 
     onSubmit(form: NgForm) {
         if (form.valid) {
-            const { firstName, lastName, email, password, confirmPassword } = form.value;
-            const body = { firstName, lastName, email, password, confirmPassword };
-            this.http.post('http://google.com', body).subscribe(response => {
-                console.log(response);
+            const { firstName, lastName, username, password, confirmPassword } = form.value;
+            const body = { firstName, lastName, username, password, confirmPassword };
+            // this.http.post('http://your-api-url.com', body).subscribe(response => {
+            //     console.log(response);
                 this.step = 2; // Proceed to the next step
-            }, error => {
-                console.error(error);
-            });
+            // }, error => {
+            //     console.error(error);
+            // });
+        } else {
+            console.error('Form is invalid');
+        }
+    }
+
+    getOtp(email: string) {
+        // Send a request to the server to generate and send an OTP to the email
+    }
+
+    onGetOtp(form: NgForm) {
+        if (form.valid) {
+            const { email, otp } = form.value;
+            this.step = 3;
+            // Send a request to the server to verify the OTP
+        } else {
+            console.error('Form is invalid');
+        }
+    }
+
+    onSubmitOtp(form: NgForm) {
+        if (form.valid) {
+            const { email, otp } = form.value;
+            this.step = 4;
+            // Send a request to the server to verify the OTP
+        } else {
+            console.error('Form is invalid');
+        }
+    }
+    
+    onCollege(form: NgForm) {
+        if (form.valid) {
+            const { college } = form.value;
+            this.step = 5;
+            // Send a request to the server to verify the OTP
         } else {
             console.error('Form is invalid');
         }

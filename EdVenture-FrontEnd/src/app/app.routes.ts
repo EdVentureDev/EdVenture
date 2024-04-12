@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgetpageComponent } from './components/forgetpage/forgetpage.component';
 
+
 export const routes: Routes = [
   { title: 'EdVenture | Home', path: '', redirectTo: 'home', pathMatch: 'full'},
   { title: 'EdVenture | Home', path: 'home', component: HomeComponent },
