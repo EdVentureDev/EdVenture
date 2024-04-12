@@ -62,11 +62,9 @@
             </div>
         </div>
         <div class="rightContainer" *ngIf="step === 2">
-            <form #otpForm="ngForm" (ngSubmit)="onSubmitOtp(otpForm)">
+            <form #otpForm="ngForm" (ngSubmit)="onGetOtp(otpForm)">
                 <input name="email" ngModel #email="ngModel" type="email" placeholder="Email">
-                <button type="button" (click)="getOtp(email.value)">Get OTP</button>
-                <input name="otp" ngModel #otp="ngModel" type="password" placeholder="Enter OTP">
-                <button type="submit" [disabled]="!otpForm.valid">Verify</button>
+                <button type="submit" (click)="getOtp(email.value)">Get OTP</button>
             </form>
         </div>
 
@@ -84,12 +82,18 @@
             </div>
 
             <div class="heading">
-                Verify your email.
+                Enter the OTP.
             </div>
 
             <div class="subText">
                 Already have an account? <a routerLink="/login"> Login</a>
             </div>
+        </div>
+        <div class="rightContainer" *ngIf="step === 3">
+            <form #otpForm="ngForm" (ngSubmit)="onSubmitOtp(otpForm)">
+                <input name="otp" ngModel #otp="ngModel" type="password" placeholder="Enter OTP">
+                <button type="submit" [disabled]="!otpForm.valid">Verify</button>
+            </form>
         </div>
     </div>
 </div>

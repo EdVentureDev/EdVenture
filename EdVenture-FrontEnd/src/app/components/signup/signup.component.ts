@@ -40,6 +40,16 @@ export class SignupComponent {
         // Send a request to the server to generate and send an OTP to the email
     }
 
+    onGetOtp(form: NgForm) {
+        if (form.valid) {
+            const { email, otp } = form.value;
+            this.step = 3;
+            // Send a request to the server to verify the OTP
+        } else {
+            console.error('Form is invalid');
+        }
+    }
+
     onSubmitOtp(form: NgForm) {
         if (form.valid) {
             const { email, otp } = form.value;
