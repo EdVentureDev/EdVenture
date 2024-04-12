@@ -1,0 +1,106 @@
+.NavBarContainer{
+    margin: 0;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.leftContainer{
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.logoText{
+    font-family: var(--typeface-mono);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logoSquare{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    width: 34px;
+    height: 26px;
+    margin-right: 2px;
+}
+
+.icon{
+    color: white;
+}
+
+.navLinks{
+    display: flex;
+    margin-left: 250px;
+}
+
+.navLinks a, .rightContainer a{
+    font-family: var(--typeface-sans);
+    font-size: 14.3px;
+    font-weight: 400;
+    margin: 12px;
+    color: hsl(0, 0%, 60%);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navLinks a:hover, .rightContainer a:hover{
+    color: hsl(0, 0%, 70%);
+}
+
+.navLinks a.active{
+    color: hsl(0, 0%, 90%);
+}
+
+.rightContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .SidebarContainer.open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(0, 0%, 10%, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 11;
+    transition: 0.5s;
+
+}
+
+.SidebarContainer.open .sidebarContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 350px;
+    z-index: 12;
+    transition: 0.5s;
+}
+.sidebarContent{
+    position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  transition: all .5s ease;
+} */

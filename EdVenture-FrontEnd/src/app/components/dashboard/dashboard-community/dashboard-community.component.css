@@ -1,0 +1,10 @@
+.Community-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    /* Add other styles as needed */
+}
