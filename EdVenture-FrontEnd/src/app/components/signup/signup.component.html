@@ -1,1 +1,43 @@
-<p>signup works!</p>
+<div class="signupContainer">
+    <img src="/assets/images/background.png" alt="">
+    <div class="mainContent">
+        <div class="leftContainer" *ngIf="step === 1">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
+
+            <div class="heading">
+                Create your account.
+            </div>
+
+            <div class="subText">
+                Already have an account? <a routerLink="/login"> Login</a>
+            </div>
+        </div>
+
+        <div class="rightContainer" *ngIf="step === 1">
+            <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+                <input name="firstName" ngModel #firstName="ngModel" type="text" placeholder="First Name">
+                <input name="lastName" ngModel #lastName="ngModel" type="text" placeholder="Last Name">
+                <input name="email" ngModel #email="ngModel" type="email" placeholder="Email">
+                <div class="password-container">
+                    <input name="password" ngModel #password="ngModel" [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+                    <span class="material-symbols-outlined password-icon" (click)="hidePassword = !hidePassword">
+                        {{hidePassword ? 'visibility' : 'visibility_off'}}
+                    </span>
+                </div>
+                <input name="confirmPassword" ngModel #confirmPassword="ngModel" type="password" placeholder="Confirm Password" [pattern]="password.value">
+                <button type="submit" [disabled]="!signupForm.valid">Next</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>
