@@ -87,7 +87,7 @@
     margin-left: 2px;
 }
 
-.rightContainer input{
+.rightContainer form input{
     box-sizing: border-box;
     width: 100%;
     height: 40px;
@@ -105,12 +105,12 @@
     outline: none;
 }
 
-.rightContainer input:nth-child(1), .rightContainer input:nth-child(2){
+.rightContainer form .firstName,.rightContainer form .lastName{
     width: calc(50% - 5px);
     margin-top: 20px;
 }
 
-.rightContainer input:nth-child(1){
+.rightContainer form .firstName{
     margin-right: 10px;
 }
 
@@ -149,12 +149,12 @@
     font-size: 22px;
 }
 
-.rightContainer .password-container input {
+.rightContainer form .password-container input {
     margin: 0;
     width: 100%;
 }
 
-.rightContainer .password-container span{
+.rightContainer form .password-container span{
     color: hsl(0, 0%, 50%);
     user-select: none;
 }

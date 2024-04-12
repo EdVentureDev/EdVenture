@@ -24,20 +24,72 @@
 
         <div class="rightContainer" *ngIf="step === 1">
             <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
-                <input name="firstName" ngModel #firstName="ngModel" type="text" placeholder="First Name">
-                <input name="lastName" ngModel #lastName="ngModel" type="text" placeholder="Last Name">
-                <input name="email" ngModel #email="ngModel" type="email" placeholder="Email">
+                <input name="firstName" ngModel #firstName="ngModel" type="text" placeholder="First Name" class="firstName">
+                <input name="lastName" ngModel #lastName="ngModel" type="text" placeholder="Last Name" class="lastName">
+                <input name="username" ngModel #username="ngModel" type="text" placeholder="Username">
                 <div class="password-container">
-                    <input name="password" ngModel #password="ngModel" [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+                    <input name="password" ngModel #password="ngModel" [type]="hidePassword ? 'password' : 'text'"
+                        placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
                     <span class="material-symbols-outlined password-icon" (click)="hidePassword = !hidePassword">
                         {{hidePassword ? 'visibility' : 'visibility_off'}}
                     </span>
                 </div>
-                <input name="confirmPassword" ngModel #confirmPassword="ngModel" type="password" placeholder="Confirm Password" [pattern]="password.value">
+                <input name="confirmPassword" ngModel #confirmPassword="ngModel" type="password"
+                    placeholder="Confirm Password" [pattern]="password.value">
                 <button type="submit" [disabled]="!signupForm.valid">Next</button>
             </form>
         </div>
 
+        <!-- Step 2: OTP Verification -->
+        <div class="leftContainer" *ngIf="step === 2">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
 
+            <div class="heading">
+                Verify your email.
+            </div>
+
+            <div class="subText">
+                Already have an account? <a routerLink="/login"> Login</a>
+            </div>
+        </div>
+        <div class="rightContainer" *ngIf="step === 2">
+            <form #otpForm="ngForm" (ngSubmit)="onSubmitOtp(otpForm)">
+                <input name="email" ngModel #email="ngModel" type="email" placeholder="Email">
+                <button type="button" (click)="getOtp(email.value)">Get OTP</button>
+                <input name="otp" ngModel #otp="ngModel" type="password" placeholder="Enter OTP">
+                <button type="submit" [disabled]="!otpForm.valid">Verify</button>
+            </form>
+        </div>
+
+        <!-- step 3 -->
+        <div class="leftContainer" *ngIf="step === 3">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
+
+            <div class="heading">
+                Verify your email.
+            </div>
+
+            <div class="subText">
+                Already have an account? <a routerLink="/login"> Login</a>
+            </div>
+        </div>
     </div>
 </div>
