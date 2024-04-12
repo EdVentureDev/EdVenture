@@ -1,0 +1,40 @@
+#resourcespage{
+    min-height: 100vh;
+    padding: 170px 55px 0;
+    font-family: var(--typeface-sans);
+}
+#resourcesheading{
+    font-size: 48px;
+    font-weight: 500;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    font-family: var(--typeface-sans);
+    font-size: 48px;
+    font-weight: 500;
+    margin-top:170px;
+}
+
+.resource {
+    color: grey;
+    margin-bottom: 40px;
+    width: 400px;
+    height: 400px; 
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 25px 25px;
+    margin: 20px;
+}
+#resources{
+    display: flex;
+    flex-wrap: wrap;
+}
+.resource:hover {
+    transform: scale(1.1); /* Increase size to 110% */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+a{
+    text-decoration: none;
+}
