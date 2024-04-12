@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="signupContainer">
+    <img src="/assets/images/background.png" alt="">
+    <div class="mainContent">
+        <div class="leftContainer">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
+
+            <div class="heading">
+                Login to Your Account
+            </div>
+
+            <div class="subText">
+                New User? <a routerLink="/login"> SignUp</a>
+            </div>
+        </div>
+
+        <div class="rightContainer">
+            <form>
+            <input type="text" placeholder="Email address or username" name="username" required>
+            <div class="password-container">
+                <input name="password"  type="text" placeholder="Password" >
+                <span class="material-symbols-outlined password-icon">
+
+                </span>
+            </div>
+            <a routerLink="/forgetpassword">Forgot Password?</a>
+            <br>
+            <button type="submit">Log In</button>
+            </form>
+            
+        </div>
+
+
+    </div>
