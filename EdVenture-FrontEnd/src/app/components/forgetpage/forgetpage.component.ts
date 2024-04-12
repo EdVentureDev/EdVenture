@@ -22,18 +22,42 @@ export class ForgetpageComponent {
 
   constructor(public http: HttpClient) { }
 
+  getOtp(email: string) {
+    // Send a request to the server to generate and send an OTP to the email
+  }
+
+  onGetOtp(form: NgForm) {
+    if (form.valid) {
+        const { email, otp } = form.value;
+        this.step = 2;
+        // Send a request to the server to verify the OTP
+    } else {
+        console.error('Form is invalid');
+    }
+  }
+
+  onSubmitOtp(form: NgForm) {
+    if (form.valid) {
+        const { email, otp } = form.value;
+        // Send a request to the server to verify the OTP
+        this.step = 3;
+    } else {
+        console.error('Form is invalid');
+    }
+  }
+
   onSubmit(form: NgForm) {
-      if (form.valid) {
-          const { firstName, lastName, email, password, confirmPassword } = form.value;
-          const body = { firstName, lastName, email, password, confirmPassword };
-          this.http.post('http://google.com', body).subscribe(response => {
-              console.log(response);
-              this.step = 2; // Proceed to the next step
-          }, error => {
-              console.error(error);
-          });
-      } else {
-          console.error('Form is invalid');
-      }
+    if (form.valid) {
+        const { firstName, lastName, email, password, confirmPassword } = form.value;
+        const body = { firstName, lastName, email, password, confirmPassword };
+        this.http.post('http://google.com', body).subscribe(response => {
+            console.log(response);
+            this.step = 3; // Proceed to the next step
+        }, error => {
+            console.error(error);
+        });
+    } else {
+        console.error('Form is invalid');
+    }
   }
 }

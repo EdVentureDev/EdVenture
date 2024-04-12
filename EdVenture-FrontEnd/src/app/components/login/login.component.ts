@@ -16,6 +16,22 @@ import { ForgetpageComponent } from '../forgetpage/forgetpage.component';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  
+  hidePassword = true;
+
+    constructor(public http: HttpClient) { }
+
+    /*onSubmit(form: NgForm) {
+        if (form.valid) {
+            const {email, password } = form.value;
+            const body = {email, password};
+            this.http.post('http://google.com', body).subscribe(response => {
+                console.log(response);
+                            }, error => {
+                console.error(error);
+            });
+        } else {
+            console.error('Form is invalid');
+        }
+    }*/
   
 }

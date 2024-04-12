@@ -1,6 +1,7 @@
 <div class="signupContainer">
     <img src="/assets/images/background.png" alt="">
     <div class="mainContent">
+
         <div class="leftContainer" *ngIf="step === 1">
             <div class="logoContainer">
                 <div class="logoImage">
@@ -14,30 +15,76 @@
             </div>
 
             <div class="heading">
-                Create your account.
+                Enter your email.
             </div>
 
             <div class="subText">
                 Already have an account? <a routerLink="/login"> Login</a>
             </div>
         </div>
-
         <div class="rightContainer" *ngIf="step === 1">
-            <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
-                <input name="firstName" ngModel #firstName="ngModel" type="text" placeholder="First Name">
-                <input name="lastName" ngModel #lastName="ngModel" type="text" placeholder="Last Name">
+            <form #otpForm="ngForm" (ngSubmit)="onGetOtp(otpForm)">
                 <input name="email" ngModel #email="ngModel" type="email" placeholder="Email">
+                <button type="submit" (click)="getOtp(email.value)">Get OTP</button>
+            </form>
+        </div>
+
+        <div class="leftContainer" *ngIf="step === 2">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
+
+            <div class="heading">
+                Enter the OTP.
+            </div>
+
+            <div class="subText">
+                Already have an account? <a routerLink="/login"> Login</a>
+            </div>
+        </div>
+        <div class="rightContainer" *ngIf="step === 2">
+            <form #otpForm="ngForm" (ngSubmit)="onSubmitOtp(otpForm)">
+                <input name="otp" ngModel #otp="ngModel" type="password" placeholder="Enter OTP">
+                <button type="submit" [disabled]="!otpForm.valid">Verify</button>
+            </form>
+        </div>
+
+        <div class="leftContainer" *ngIf="step === 3">
+            <div class="logoContainer">
+                <div class="logoImage">
+                    <div class="logoSquare">
+                        <span class="material-symbols-outlined">
+                            import_contacts
+                        </span>
+                    </div>
+                </div>
+                <div class="logoText">EdVenture</div>
+            </div>
+
+            <div class="heading">
+                Reset Password
+            </div>
+        </div>
+
+        <div class="rightContainer" *ngIf="step === 3">
+            <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
                 <div class="password-container">
-                    <input name="password" ngModel #password="ngModel" [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+                    <input name="password" ngModel #password="ngModel" [type]="hidePassword ? 'password' : 'text'"
+                        placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
                     <span class="material-symbols-outlined password-icon" (click)="hidePassword = !hidePassword">
                         {{hidePassword ? 'visibility' : 'visibility_off'}}
                     </span>
                 </div>
-                <input name="confirmPassword" ngModel #confirmPassword="ngModel" type="password" placeholder="Confirm Password" [pattern]="password.value">
-                <button type="submit" [disabled]="!signupForm.valid">Next</button>
+                <input name="confirmPassword" ngModel #confirmPassword="ngModel" type="password"
+                    placeholder="Confirm Password" [pattern]="password.value">
+                <button type="submit" [disabled]="!signupForm.valid">Update</button>
             </form>
         </div>
-
-
     </div>
-</div>

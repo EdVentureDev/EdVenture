@@ -24,16 +24,14 @@
 
         <div class="rightContainer">
             <form>
-            <input type="text" placeholder="Email address or username" name="username" required>
-            <div class="password-container">
-                <input name="password"  type="text" placeholder="Password" >
-                <span class="material-symbols-outlined password-icon">
-
-                </span>
-            </div>
-            <a routerLink="/forgetpassword">Forgot Password?</a>
-            <br>
-            <button type="submit">Log In</button>
+                <input   type="email" placeholder="Email or username">
+                <div class="password-container">
+                    <input name="password"  [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+                    <span class="material-symbols-outlined password-icon" (click)="hidePassword = !hidePassword">
+                        {{hidePassword ? 'visibility' : 'visibility_off'}}
+                    </span>
+                </div>
+                 <button type="submit">Login</button>
             </form>
             
         </div>
