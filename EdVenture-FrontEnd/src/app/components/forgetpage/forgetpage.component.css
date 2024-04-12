@@ -87,15 +87,6 @@
     margin-left: 2px;
 }
 
-.rightContainer a{
-    font-size: 15px;
-    text-decoration: none;
-}
-.forgetContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .rightContainer form input{
     box-sizing: border-box;
     width: 100%;
@@ -169,7 +160,6 @@
 }
 a{
     color: hsl(0, 0%, 50%);
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
 
