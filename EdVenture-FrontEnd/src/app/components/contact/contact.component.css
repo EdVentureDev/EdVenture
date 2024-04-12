@@ -1,0 +1,139 @@
+.contactContainer {
+    min-height: 100vh;
+    padding: 170px 55px 0px;
+    font-family: var(--typeface-sans);
+    box-sizing: border-box;
+}
+
+#contacting {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact_us {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#contact_para {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 40px;
+    width: 60%;
+}
+#boxes {
+    display: flex;
+    justify-content: space-between;
+}
+
+#box1, #box2 {
+    width: calc(50% - 10px);
+    position: relative;
+}
+
+#contact_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#name, #email, #message {
+    box-sizing: border-box;
+    width: 100%;
+    background: #000000;
+    border: 0.5px solid hsl(0, 0%, 80%);
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+}
+
+#submit {
+    width: 100px;
+    padding: 8px 20px;
+    font-size: 14px;
+    background: #32FF10;
+    border-radius: 7px;
+    font-family: var(--typeface-sans);
+    font-weight: 500;
+}
+
+#email::placeholder, #message::placeholder, #name::placeholder {
+    font-size: 14px;
+    font-family: var(--typeface-mono);
+}
+
+#bug {
+    padding: 20px 25px;
+    background: rgba(26, 26, 26, 0.2);
+    border: 1px solid #808080;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#found_bug{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#found_bug_body{
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+#icons {
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.26);
+    border: 1px solid #808080;
+    backdrop-filter: blur(12.3px);
+    border-radius: 10px;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon1, #icon2, #icon3 {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: 1px solid grey;
+    margin-right: 10px;
+}
+
+#appreciation {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 25px;
+    background: #000000;
+    border: 1px solid #808080;
+    border-radius: 10px;
+}
+
+#appreciation_body {
+    font-family: var(--typeface-sans);
+    color: grey;
+}
+
+#designs1, #designs2 {
+    position: absolute;
+    transform: rotate(-23.01deg);
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+}
+
+#designs1 {
+    top: 150px;
+    right: 50px;
+}
+
+#designs2 {
+    top: 0;
+    left: 20px;
+}

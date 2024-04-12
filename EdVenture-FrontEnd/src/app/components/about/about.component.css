@@ -1,0 +1,101 @@
+.aboutContainer{
+    min-height: 100vh;
+    padding: 170px 55px 0;
+    font-family: var(--typeface-sans);
+}
+#centering {
+    display: flex;
+    flex-direction: column;
+}
+
+#about_us, #about_para, #team_para {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+#about_us{
+    font-size: 48px;
+    font-weight: 500;
+}
+#about_para, #team_para {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 40px;
+}
+#design1{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 505px;
+    left: 500px
+}
+
+#design2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 312px;
+    right: 250px
+}
+.storyParentContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#story, #What_we_do {
+    box-sizing: border-box;
+    background: rgba(26, 26, 26, 0.5);
+    border: 0.5px solid #808080;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: calc(50% - 10px); /* Adjust as needed */
+}
+
+#story_para, #what_para {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+#our_story, #what {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 500;
+}
+#our_team {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 500;
+}
+.teamMembers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#member1, #member2, #member3, #member4 {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px 25px;
+}
+
+#name1, #name2, #name3, #name4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#intro1, #intro2, #intro3, #intro4 {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 10px;
+}
