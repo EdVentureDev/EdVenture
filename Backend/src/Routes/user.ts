@@ -1,7 +1,7 @@
 import  express  from 'express';
 import zod from "zod"
 import argon from "argon2"
-import User from "../db/index";
+import { User } from '../db';
 const router = express.Router();
 
 async function hashPassword(password : string)    {
@@ -13,7 +13,9 @@ async function passwordVerify(hashedPassword: string, plainPassword: string)    
 }
 
 const signUpBody = zod.object({
+    name: zod.string(),
     username: zod.string(),
+    email: zod.string(),
     educational_institute: zod.string(),
     password: zod.string()
 })
@@ -40,7 +42,9 @@ router.post("/signup",async function(req,res)   {
     const hashedPassword = await hashPassword(rawPassword)
 
     const newUser = new User({
+        name: body.name,
         username: body.username,
+        email: body.email,
         educational_institute: body.educational_institute,
         password: hashedPassword
     })
