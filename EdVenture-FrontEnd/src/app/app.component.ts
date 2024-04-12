@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardNavComponent } from './components/dashboard/dashboard-nav/dashboard-nav.component';
 import { DashboardCommunityComponent } from './components/dashboard/dashboard-community/dashboard-community.component';
+import { ForgetpageComponent } from './components/forgetpage/forgetpage.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { DashboardCommunityComponent } from './components/dashboard/dashboard-co
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'EdVenture';
 }
