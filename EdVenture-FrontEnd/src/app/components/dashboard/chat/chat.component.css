@@ -14,10 +14,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px;
+  padding: 25px;
   width: 60%;
   background-color: hsl(0, 0%, 7%);
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .leftTopBar {
@@ -34,7 +35,7 @@
   border: 1px solid gray;
 }
 
-#leftUserIconMain img {
+#leftUserIconMain img, #rightUserIconMain img{
   width: 101%;
   height: auto;
   border-radius: 50%; /* Add this to make the image circular */
@@ -143,15 +144,59 @@
 }
 
 .rightTopBar {
-  background-color: hsl(0, 0%, 60%);
+  background-color: hsl(0, 0%, 12%);
   width: full;
-  height: 80px;
+  height: 60px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+#rightUserIconMain {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: grey;
+  border: 1px solid gray;
+  margin-right: 20px;
+}
+
+.rightTopBar #rightUserName{
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(0, 0%, 90%);
 }
 
 .rightBottomBar {
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(0, 0%, 5%);
   width: full;
-  height: 80px;
+  height: 50px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rightBottomBar .inputBox{
+  height: 40px;
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.rightBottomBar .inputBox input{
+  height: 100%;
+  width: 100%;
+  background-color: hsl(0, 0%, 10%);
+  border: none;
+  border-radius: 10px;
+  padding: 0 15px;
+  color: hsl(0, 0%, 90%);
+  font-size: 16px;
 }
