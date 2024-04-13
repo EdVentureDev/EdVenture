@@ -168,7 +168,7 @@ const msgGroupBody = zod.object({
   content: zod.string(),
 });
 
-router.put("/msgGroup", async function (req, res) {
+router.post("/msgGroup", async function (req, res) {
   const body = req.body;
   const parsedBody = msgGroupBody.safeParse(body);
 
