@@ -52,10 +52,12 @@
             </div>
             <div id="rightUserName">Trishank Kaushik</div>
         </div>
-        <div class="chatContent" *ngFor="let message of messages">
-                <p [ngClass]="{ 'sendMessage': message.sentBy === loggedInUsername, 'receiveMessage': message.sentBy !== loggedInUsername }">
-                    {{ message.sentBy }}: {{ message.content }}
-                </p>
+        <div class="chatContent" >
+                <div class="chatMessage" *ngFor="let message of messages">
+                    <p [ngClass]="{ 'sendMessage': message.sentBy === loggedInUsername, 'receiveMessage': message.sentBy !== loggedInUsername }">
+                        {{ message.sentBy }}: {{ message.content }}
+                    </p>
+                </div>
         </div>
         <div class="rightBottomBar">
             <div class="mediaIcons">
@@ -70,12 +72,12 @@
                 </span>
             </div>
             <div class="inputBox">
-                <input type="text" placeholder="Type a message">
+                <input type="text" [(ngModel)]="content" placeholder="Type a message">
             </div>
             <div class="sendIcon">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" (click)="sendMessage()">
                     send
-                    </span>
+                </span>
             </div>
         </div>
     </div>
