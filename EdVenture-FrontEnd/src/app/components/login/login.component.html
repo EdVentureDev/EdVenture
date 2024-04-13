@@ -24,9 +24,9 @@
 
         <div class="rightContainer">
             <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-                <input   type="email" placeholder="Email or username">
+                <input name="email" ngModel type="email" placeholder="Email or username">
                 <div class="password-container">
-                    <input name="password"  [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+                    <input name="password" ngModel [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
                     <span class="material-symbols-outlined password-icon" (click)="hidePassword = !hidePassword">
                         {{hidePassword ? 'visibility' : 'visibility_off'}}
                     </span>
