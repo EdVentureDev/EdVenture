@@ -4,15 +4,14 @@
 }
 
 .description{
-    margin-top: 170px;
+    padding-top: 170px;
     margin-left: 55px;
     font-size: 48px;
     font-weight: 500;
 
 }
 .community-container {
-    width: 90%;
-    height: 400px; 
+    height: 60vh; 
     margin: 10px 55px;
     padding: 20px;
     box-sizing: border-box;
@@ -21,6 +20,7 @@
     overflow: auto;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .community-header{
@@ -92,8 +92,7 @@
 
 .CreateCommunityButton{
     box-sizing: border-box;
-    height: 40px;
-    padding: 0 10px;
+    padding: 10px 20px;
     border: 1px solid hsl(0, 0%, 30%);
     border-radius: 3px;
     color: black;

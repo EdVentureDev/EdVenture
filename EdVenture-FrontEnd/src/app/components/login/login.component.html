@@ -24,19 +24,18 @@
 
         <div class="rightContainer">
             <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-                <input name="email" ngModel type="email" placeholder="Email or username">
+                <input name="email" ngModel type="text" placeholder="Email or username">
                 <div class="password-container">
-                    <input name="password" ngModel [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+                    <input name="password" ngModel [type]="hidePassword ? 'password' : 'text'" placeholder="Password">
                     <span class="material-symbols-outlined password-icon" (click)="hidePassword = !hidePassword">
                         {{hidePassword ? 'visibility' : 'visibility_off'}}
                     </span>
                 </div>
                 <div class="forgetContainer">
                     <a routerLink="/forgetpage">Forget Password?</a>
-                 <button type="submit" [routerLink]="loginVerifier? '/dashboard' : null">Login</button>
+                 <button type="submit">Login</button>
                 </div>
             </form>
-            
         </div>
 
 

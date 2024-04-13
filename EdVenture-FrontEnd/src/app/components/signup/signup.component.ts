@@ -22,6 +22,8 @@ import { CommonModule } from '@angular/common';
 })
 export class SignupComponent {
     hidePassword = true;
+    formSubmitted = false;
+    passwordsMatch = true;
     step = 1;
     userData = {
         firstName: '',
@@ -41,6 +43,11 @@ export class SignupComponent {
     constructor(private http: HttpClient) { }
 
     onSubmit(form: NgForm) {
+        this.formSubmitted = true;
+        if (form.value.password !== form.value.confirmPassword) {
+            this.passwordsMatch = false;
+            return;
+        }
         if (form.valid) {
             this.userData.firstName = form.value.firstName;
             this.userData.lastName = form.value.lastName;
@@ -65,7 +72,7 @@ export class SignupComponent {
     }
 
     onGetOtp(form: NgForm) {
-        console.log(this.state);
+        this.formSubmitted = true;
         if (form.valid) {
             this.step = 3;
         } else {
