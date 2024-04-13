@@ -12,12 +12,13 @@ import { DashboardNavComponent } from './components/dashboard/dashboard-nav/dash
 import { DashboardCommunityComponent } from './components/dashboard/dashboard-community/dashboard-community.component';
 import { ForgetpageComponent } from './components/forgetpage/forgetpage.component';
 import { ResourcesComponent } from './components/resources/resources.component';
+import { CommunityResourceComponent } from './components/resources/community-resource/community-resource.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, NavComponent, HomeComponent, AboutComponent, ContactComponent, PageNotFoundComponent, FooterComponent, DashboardNavComponent, DashboardCommunityComponent, ResourcesComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, NavComponent, HomeComponent, AboutComponent, ContactComponent, PageNotFoundComponent, FooterComponent, DashboardNavComponent, DashboardCommunityComponent, ResourcesComponent, CommunityResourceComponent, ForgetpageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
