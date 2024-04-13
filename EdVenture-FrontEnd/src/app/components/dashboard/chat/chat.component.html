@@ -52,11 +52,10 @@
             </div>
             <div id="rightUserName">Trishank Kaushik</div>
         </div>
-        <div class="chatContent">
-            <div *ngFor="let message of messages" 
-                 [ngClass]="{'sendMessage': message.sentByUsername === loggedInUsername, 'receiveMessage': message.sentByUsername !== loggedInUsername}">
-                {{message.messageContentObject}}
-            </div>
+        <div class="chatContent" *ngFor="let message of messages">
+                <p [ngClass]="{ 'sendMessage': message.sentBy === loggedInUsername, 'receiveMessage': message.sentBy !== loggedInUsername }">
+                    {{ message.sentBy }}: {{ message.content }}
+                </p>
         </div>
         <div class="rightBottomBar">
             <div class="mediaIcons">

@@ -211,9 +211,9 @@
   color: hsl(0, 0%, 90%);
 }
 
-.chatContent{
+.chatContent {
   padding: 10px;
-  height: 500px;
+  height: 10px;
   display: flex;
   flex-direction: column;
   align-items: end;

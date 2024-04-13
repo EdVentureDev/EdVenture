@@ -21,8 +21,8 @@ export class ChatComponent implements OnInit {
     this.loggedInUsername = this.cookieService.get('loggedInUsername');
 
     setInterval(() => {
-      this.http.get('http://localhost:3000/getmsgs', { params: { loggedInUsername: this.loggedInUsername } }).subscribe((newMessages: Object) => {
-        this.messages = newMessages as any[];
+      this.http.get('http://localhost:3000/api/v1/group/getmsgs', { params: { loggedInUsername: this.loggedInUsername } }).subscribe((response: any) => {
+        this.messages = response.msgs; // Changed from response.messages to response.msgs
       });
     }, 1000);
   }
