@@ -78,6 +78,7 @@
 .rightContainer span{
     margin-left: 20px;
     cursor: pointer;
+    user-select: none;
 }
 
 /* .SidebarContainer.open{
