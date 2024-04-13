@@ -23,7 +23,7 @@
         </div>
 
         <div class="rightContainer">
-            <form>
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
                 <input   type="email" placeholder="Email or username">
                 <div class="password-container">
                     <input name="password"  [type]="hidePassword ? 'password' : 'text'" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="forgetContainer">
                     <a routerLink="/forgetpage">Forget Password?</a>
-                 <button type="submit">Login</button>
+                 <button type="submit" [routerLink]="loginVerifier? '/dashboard' : null">Login</button>
                 </div>
             </form>
             
