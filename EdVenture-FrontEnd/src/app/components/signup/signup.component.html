@@ -125,12 +125,12 @@
                     <option value="Lovely professional university (phagwara)">Lovely professional university (phagwara)
                     </option>
                 </select>
-                <button type="submit" [disabled]="!otpForm.valid" routerLink="/login">Next</button>
+                <button type="submit" [disabled]="!otpForm.valid">Next</button>
             </form>
         </div>
 
         <!-- step 4 -->
-        <!-- <div class="leftContainer" *ngIf="step === 5">
+        <div class="leftContainer" *ngIf="step === 5">
             <div class="logoContainer">
                 <div class="logoImage">
                     <div class="logoSquare">
@@ -155,8 +155,8 @@
                 <input name="regNo" ngModel #regNo="ngModel" type="text" placeholder="Enter Registration Number">
                 <input name="umsPass" ngModel #umsPass="ngModel" type="password" placeholder="Enter UMS Password">
                 <p>* We only store your Registration number. UMS Password is just for Verification.</p>
-                <button type="submit" [disabled]="!otpForm.valid">Sign Up</button>
+                <button routerLink="/login" type="submit" [disabled]="!otpForm.valid">Sign Up</button>
             </form>
-        </div> -->
+        </div>
     </div>
 </div>

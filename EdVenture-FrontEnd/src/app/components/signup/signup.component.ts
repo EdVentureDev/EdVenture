@@ -97,6 +97,7 @@ export class SignupComponent {
                 .post('http://localhost:3000/api/v1/user/signup', this.userData)
                 .subscribe((response: any) => {
                     this.state = response.msg;
+                    console.log(response)
                     if ((this.state = 'User Created Successfully')) this.step = 5;
                 });
         } else {
