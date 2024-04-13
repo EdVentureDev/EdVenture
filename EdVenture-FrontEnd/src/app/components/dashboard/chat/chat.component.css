@@ -1,0 +1,69 @@
+.chat-container {
+  min-height: 90vh;
+  display: flex;
+  padding: 32px;
+}
+
+.left {
+  width: 50%;
+  background-color: black;
+  padding-right: 32px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  width: 50%;
+  background-color: hsl(0, 0%, 40%);
+  border-radius: 10px;
+}
+
+.leftTopBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#leftUserIconMain {
+  height: 80px;
+  width: 80px;
+  background-color: blue;
+  border-radius: 40px;
+}
+
+#leftUsername {
+  height: 80px;
+  width: 500px;
+  background-color: hsl(0, 0%, 10%);;
+  border-radius: 10px;
+}
+
+.leftMidBar {
+  margin-top: 25px;
+  margin-bottom: 25px;
+    border: 1px solid gray;
+  height: 60%;
+  width: full;
+  border-radius: 10px;
+}
+
+.leftBottomBar {
+  background-color: hsl(0, 0%, 10%);;
+  height: 20%;
+  width: full;
+  border-radius: 10px;
+}
+
+.rightTopBar {
+  background-color: hsl(0, 0%, 60%);
+  width: full;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.rightBottomBar {
+  background-color: hsl(0, 0%, 20%);
+  width: full;
+  height: 80px;
+  border-radius: 10px;
+}
