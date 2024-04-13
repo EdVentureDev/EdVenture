@@ -11,6 +11,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ForgetpageComponent } from './components/forgetpage/forgetpage.component';
 import { DashboardCommunityComponent } from './components/dashboard/dashboard-community/dashboard-community.component';
 import { DashboardResourcesComponent } from './components/dashboard/dashboard-resources/dashboard-resources.component';
+import { CreateCommunityComponent } from './components/dashboard/dashboard-resources/create-community/create-community.component';
 
 
 
@@ -24,7 +25,8 @@ export const routes: Routes = [
   { title: 'EdVenture | Forget Password', path: 'forgetpage', component: ForgetpageComponent},
   { title: 'EdVenture | Resources', path: 'resources', component: DashboardResourcesComponent},
   { title: 'EdVenture | Dashboard', path: 'dashboard', component: DashboardCommunityComponent},
-
+  { title: 'EdVenture | Create Community', path: 'dashboard/create-community', component: CreateCommunityComponent},
   { title: 'EdVenture | Page Not Found', path: '**', component: PageNotFoundComponent },
+
 
 ];
