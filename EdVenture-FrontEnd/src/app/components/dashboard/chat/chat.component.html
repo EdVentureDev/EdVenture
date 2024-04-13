@@ -23,23 +23,33 @@
                 </div>
             </div>
             <div class="groupContainer">
-                <div class="logo"></div>
+                <div class="logo">
+                    <img src="https://i0.wp.com/junilearning.com/wp-content/uploads/2020/06/python-programming-language.webp?fit=1920%2C1920&ssl=1" alt="">
+                </div>
                 <div class="name">Python</div>
             </div>
             <div class="groupContainer">
-                <div class="logo"></div>
+                <div class="logo">
+                    <img src="https://tublitzed.com/img/portfolio/node/browser/full/2.jpg" alt="">
+                </div>
                 <div class="name">Node</div>
             </div>
             <div class="groupContainer">
-                <div class="logo"></div>
+                <div class="logo">
+                    <img src="https://thumbs.dreamstime.com/b/angular-logo-editorial-illustrative-white-background-angular-logo-editorial-illustrative-white-background-eps-download-208329119.jpg" alt="">
+                </div>
                 <div class="name">Angular</div>
             </div>
             <div class="groupContainer">
-                <div class="logo"></div>
+                <div class="logo">
+                    <img src="https://ih1.redbubble.net/image.2043162412.5911/ur,pin_small_front,square,1000x1000.u3.jpg" alt="">
+                </div>
                 <div class="name">C++</div>
             </div>
             <div class="groupContainer">
-                <div class="logo"></div>
+                <div class="logo">
+                    <img src="https://c8.alamy.com/zooms/9/d8293f054d0048e2a759a4e500114fdd/2cfja28.jpg" alt="">
+                </div>
                 <div class="name">Java</div>
             </div>
         </div>
@@ -48,14 +58,16 @@
     <div class="right">
         <div class="rightTopBar">
             <div id="rightUserIconMain">
-                <img src="/assets/images/model2.jpeg" alt="">
+                <img src="https://thumbs.dreamstime.com/b/angular-logo-editorial-illustrative-white-background-angular-logo-editorial-illustrative-white-background-eps-download-208329119.jpg" alt="">
             </div>
-            <div id="rightUserName">Trishank Kaushik</div>
+            <div id="rightUserName">Angular</div>
         </div>
-        <div class="chatContent" *ngFor="let message of messages">
-                <p [ngClass]="{ 'sendMessage': message.sentBy === loggedInUsername, 'receiveMessage': message.sentBy !== loggedInUsername }">
-                    {{ message.sentBy }}: {{ message.content }}
-                </p>
+        <div class="chatContent" >
+                <div class="chatMessage" *ngFor="let message of messages">
+                    <p [ngClass]="{ 'sendMessage': message.sentBy === loggedInUsername, 'receiveMessage': message.sentBy !== loggedInUsername }">
+                        {{ message.sentBy }}: {{ message.content }}
+                    </p>
+                </div>
         </div>
         <div class="rightBottomBar">
             <div class="mediaIcons">
@@ -70,12 +82,12 @@
                 </span>
             </div>
             <div class="inputBox">
-                <input type="text" placeholder="Type a message">
+                <input type="text" [(ngModel)]="content" placeholder="Type a message">
             </div>
             <div class="sendIcon">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" (click)="sendMessage()">
                     send
-                    </span>
+                </span>
             </div>
         </div>
     </div>

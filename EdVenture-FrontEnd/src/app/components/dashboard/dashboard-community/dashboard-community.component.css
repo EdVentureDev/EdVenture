@@ -126,3 +126,8 @@
     font-size: 24px;
     /* Add other styles as needed */
 }
+
+.column .logo img{
+    width: 100px;
+    height: auto;
+}

@@ -135,6 +135,12 @@
   overflow: hidden;
   background-color: grey;
 }
+
+.groupContainer .logo img{
+  width: 101%;
+  height: auto;
+  border-radius: 50%; /* Add this to make the image circular */
+}
 .groupContainer .name{
   margin-left: 20px;
   font-size: 19px;
@@ -213,13 +219,20 @@
 
 .chatContent {
   padding: 10px;
-  height: auto;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: end;
+  overflow-y: auto;
 }
-
-.chatContent .sendMessage{
+.chatMessage{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  width: 100%;
+}
+.chatMessage .sendMessage{
   background-color: hsl(284, 60%, 14%);
   border-radius: 10px;
   padding: 10px;
@@ -228,7 +241,7 @@
   align-self: flex-start; /* Aligns this div to the start (left) of the parent container */
 }
 
-.chatContent .receiveMessage{
+.chatMessage .receiveMessage{
   background-color: hsl(0, 0%, 20%);
   border-radius: 10px;
   padding: 10px;
