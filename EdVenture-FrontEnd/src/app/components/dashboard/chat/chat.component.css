@@ -16,7 +16,7 @@
   justify-content: space-between;
   padding: 32px;
   width: 60%;
-  background-color: hsl(0, 0%, 40%);
+  background-color: hsl(0, 0%, 7%);
   border-radius: 10px;
 }
 
@@ -80,7 +80,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
     border: 1px solid gray;
-  height: 100vh;
+  height: 84.5%;
   width: full;
   border-radius: 10px;
   display: flex;
@@ -140,12 +140,6 @@
   font-weight: 400;
   color: hsl(0, 0%, 90%);
 
-}
-.leftBottomBar {
-  background-color: hsl(0, 0%, 10%);;
-  height: 20%;
-  width: full;
-  border-radius: 10px;
 }
 
 .rightTopBar {
