@@ -9,8 +9,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgetpageComponent } from './components/forgetpage/forgetpage.component';
-import { DashboardResourcesComponent } from './components/dashboard/dashboard-resources/dashboard-resources.component';
 import { DashboardCommunityComponent } from './components/dashboard/dashboard-community/dashboard-community.component';
+import { DashboardResourcesComponent } from './components/dashboard/dashboard-resources/dashboard-resources.component';
+
 
 
 export const routes: Routes = [
