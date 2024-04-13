@@ -2,12 +2,12 @@
     <div class="leftContainer">
         <span class="material-symbols-outlined">
             menu
-            </span>
+        </span>
         <div class="logoContainer">
             <div class="logoImage">
-                
+
                 <div class="logoSquare">
-                    
+
                     <span class="material-symbols-outlined">
                         import_contacts
                     </span>
@@ -15,17 +15,20 @@
             </div>
             <div class="logoText">EdVenture</div>
         </div>
-    
+
         <div class="navLinks">
             <a routerLink="/dashboard" routerLinkActive="active">Communities</a>
             <a routerLink="/resources" routerLinkActive="active">Resources</a>
-            <a  routerLinkActive="active">RoadMaps</a>
+            <a routerLinkActive="active">RoadMaps</a>
         </div>
     </div>
 
     <div class="rightContainer">
+        <span class="material-symbols-outlined" (click)="logout()">
+            logout
+        </span>
         <span class="material-symbols-outlined">
             person
-            </span>
+        </span>
     </div>
 </div>

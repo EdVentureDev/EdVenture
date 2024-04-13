@@ -75,6 +75,11 @@
     justify-content: center;
 }
 
+.rightContainer span{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
 /* .SidebarContainer.open{
     position: fixed;
     top: 0;
