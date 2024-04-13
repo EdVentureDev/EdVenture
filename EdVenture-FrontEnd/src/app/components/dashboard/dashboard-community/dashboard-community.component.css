@@ -12,7 +12,7 @@
 }
 .community-container {
     width: 90%;
-    height: 250px; 
+    height: 400px; 
     margin: 10px 55px;
     padding: 20px;
     box-sizing: border-box;
@@ -50,7 +50,7 @@
     border: 1px solid hsl(0, 0%, 30%);
     border-radius: 3px;
     background-color: black;
-    color: hsl(0, 05, 70%);
+    color: hsl(0, 0%, 70%);
     font-family: var(--typeface-mono);
     font-size: 14px;
     margin-top: 0px;
@@ -58,7 +58,6 @@
 }
 .community-header input:focus{
     outline: none;
-    border: 1px solid #32ff10;
 }
 .search-container {
     position: relative;
@@ -104,12 +103,16 @@
     border-radius: 7px;
     margin-left: 10px;
 }
+.CreateCommunityButton:hover{
+    background-color: hsl(212, 73%, 67%);
+}
 .column {
     cursor: pointer;
     flex: 1;
     margin: 10px;
     text-align: center;
     color: grey;
+    padding: 20px;
   background-color: rgba(255,255,255,0.09);
   border: 2px solid rgba(255,255,255,0.03);
   border-radius: 10px;

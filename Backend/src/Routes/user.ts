@@ -71,7 +71,6 @@ router.post("/verifyotp", async function (req, res) {
 router.post("/signup", async function (req, res) {
   const body = req.body;
   const parsedBody = signUpBody.safeParse(body);
-  console.log(body,parsedBody)
 
   if (!parsedBody.success) {
     return res.status(400).json({
