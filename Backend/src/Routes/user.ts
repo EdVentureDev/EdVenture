@@ -14,7 +14,8 @@ async function passwordVerify(hashedPassword: string, plainPassword: string) {
 }
 
 const signUpBody = zod.object({
-  name: zod.string(),
+  firstName: zod.string(),
+  lastName: zod.string(),
   username: zod.string(),
   email: zod.string(),
   educational_institute: zod.string(),
@@ -27,7 +28,7 @@ const otpBody = zod.object({
   method: zod.string().optional()
 });
 
-router.get("/getotp", async function (req, res) {
+router.post("/getotp", async function (req, res) {
   const parsedBody = otpBody.safeParse(req.body);
 
   if (!parsedBody.success) {
@@ -45,8 +46,8 @@ router.get("/getotp", async function (req, res) {
   });
 });
 
-router.get("/verifyotp", async function (req, res) {
-  const parsedBody = otpBody.safeParse(req.body);
+router.post("/verifyotp", async function (req, res) {
+    const parsedBody = otpBody.safeParse(req.body);
 
   if (!parsedBody.success) {
     return res.status(400).json({
@@ -69,8 +70,8 @@ router.get("/verifyotp", async function (req, res) {
 
 router.post("/signup", async function (req, res) {
   const body = req.body;
-
   const parsedBody = signUpBody.safeParse(body);
+  console.log(body,parsedBody)
 
   if (!parsedBody.success) {
     return res.status(400).json({
@@ -89,7 +90,8 @@ router.post("/signup", async function (req, res) {
   const hashedPassword = await hashPassword(rawPassword);
 
   const newUser = new User({
-    name: body.name,
+    firstName: body.firstName,
+    lastName: body.lastName,
     username: body.username,
     email: body.email,
     educational_institute: body.educational_institute,

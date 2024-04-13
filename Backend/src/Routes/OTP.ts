@@ -26,7 +26,7 @@ export function sendOTP(userIdentifier: string,method:string) {
         setString1 = "Reset Your Password"
         setString2 = "Use this code to reset your password. This code will expire after 10 minutes"
     }
-    else    {
+    else if(method == "signup")    {
         setString1 = "Verify Your Email"
         setString2 = "Use this code to sign up to EdVenture. This code will expire after 10 minutes"
 

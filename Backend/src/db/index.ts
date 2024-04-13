@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 mongoose.connect('mongodb+srv://Trishank:iqv6js8Fi6CUBOkF@cluster0.e8cglhl.mongodb.net/EdVenture')
 
 const UserSchema = new mongoose.Schema({
-    name: String,
+    firstName: String,
+    lastName: String,
     username: String,
     email: String,
     educational_institute: String,
