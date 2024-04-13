@@ -180,6 +180,8 @@ router.post("/signin", async function (req, res) {
       secure: true,
       path: '/',
     });
+    
+    res.cookie("loggedInUsername",username)
 
     return res.status(200).json({
       msg: "Log In Success",

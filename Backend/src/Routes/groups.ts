@@ -14,6 +14,10 @@ const createGroupBody = zod.object({
   members: zod.array(zod.string()),
 });
 
+router.get("/getmsmgs",async function(req,res)  {
+  
+})
+
 router.post("/createGroup", async function (req, res) {
   const body = req.body;
   const parsedBody = createGroupBody.safeParse(body);
@@ -104,6 +108,8 @@ const removeMembersBody = zod.object({
   from: zod.string(),
   members: zod.array(zod.string())
 })
+
+
 
 router.put("/removeMembers", async function (req, res) {
   const body = req.body;
