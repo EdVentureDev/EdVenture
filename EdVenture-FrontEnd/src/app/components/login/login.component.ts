@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
@@ -24,10 +24,11 @@ export class LoginComponent {
   }
   state="init"
 
-    constructor(public http: HttpClient) { }
+    constructor(private http: HttpClient, private router: Router) { }
 
     onSubmit(form: NgForm) {
-        if (form.valid) {
+        if (form.valid ) {
+
             this.body.username = form.value.email;
             this.body.password = form.value.password;
             this.http
@@ -36,6 +37,7 @@ export class LoginComponent {
                     this.state = response.msg;
                     if(this.state == "Log In Success"){
                         this.loginVerifier = true;
+                        this.router.navigate(['/dashboard']);
                     }
                 });
         } else {
