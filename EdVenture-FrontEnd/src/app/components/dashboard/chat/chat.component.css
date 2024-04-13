@@ -176,7 +176,7 @@
 .rightBottomBar {
   background-color: hsl(0, 0%, 5%);
   width: full;
-  height: 50px;
+  height: 60px;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -193,10 +193,48 @@
 .rightBottomBar .inputBox input{
   height: 100%;
   width: 100%;
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 5%);
   border: none;
   border-radius: 10px;
   padding: 0 15px;
   color: hsl(0, 0%, 90%);
   font-size: 16px;
+  outline: none;
+}
+
+.mediaIcons span:nth-child(1){
+  margin-left: 20px;
+}
+.mediaIcons span, .sendIcon span{
+  margin-right: 20px;
+  font-size: 28px;
+  color: hsl(0, 0%, 90%);
+}
+
+.chatContent{
+  padding: 10px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  overflow: auto;
+}
+
+.chatContent .sendMessage{
+  background-color: hsl(284, 60%, 14%);
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 70%;
+  margin-bottom: 10px;
+  align-self: flex-start; /* Aligns this div to the start (left) of the parent container */
+}
+
+.chatContent .receiveMessage{
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 70%;
+  align-self: flex-end;
+  text-align: right; /* Aligns this div to the end (right) of the parent container */
 }

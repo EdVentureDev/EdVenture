@@ -52,6 +52,12 @@
             </div>
             <div id="rightUserName">Trishank Kaushik</div>
         </div>
+        <div class="chatContent">
+            <div *ngFor="let message of messages" 
+                 [ngClass]="{'sendMessage': message.sentByUsername === loggedInUsername, 'receiveMessage': message.sentByUsername !== loggedInUsername}">
+                {{message.messageContentObject}}
+            </div>
+        </div>
         <div class="rightBottomBar">
             <div class="mediaIcons">
                 <span class="material-symbols-outlined">
@@ -68,7 +74,9 @@
                 <input type="text" placeholder="Type a message">
             </div>
             <div class="sendIcon">
-
+                <span class="material-symbols-outlined">
+                    send
+                    </span>
             </div>
         </div>
     </div>
