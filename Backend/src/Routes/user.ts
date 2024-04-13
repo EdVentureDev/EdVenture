@@ -15,10 +15,11 @@ async function passwordVerify(hashedPassword: string, plainPassword: string) {
   return await argon.verify(hashedPassword, plainPassword);
 }
 
+
+
 async function verifyCookie(cookie: any) {
   if(cookie == undefined)
     return false;
-  console.log("Cookie:", cookie)
   const verify = jwt.verify(cookie,JWT_SECRET)
   return verify;
 }
@@ -38,9 +39,17 @@ const otpBody = zod.object({
   method: zod.string().optional()
 });
 
+
+router.get("/logout",async function(req,res) {
+  res.clearCookie('Authorization')
+  res.clearCookie('loggedInUsername')
+  res.status(200).json({
+    msg: "Logout Success"
+  })
+})
+
 router.post("/checkCookie",async function(req,res)  {
   const cookie = req.cookies.Authorization;
-  console.log(cookie)
   if(await verifyCookie(cookie))  {
     return res.status(200).json({
       msg: "Log in Success"
@@ -165,7 +174,6 @@ router.post("/signin", async function (req, res) {
       msg: "Invalid Password",
     });
   } else {
-    console.log("JWT SIGNS")
     const token = jwt.sign(
       {
         username
