@@ -2,10 +2,11 @@
   min-height: 90vh;
   display: flex;
   padding: 32px;
+  font-family: var(--typeface-sans);
 }
 
 .left {
-  width: 50%;
+  width: 40%;
   background-color: black;
   padding-right: 32px;
 }
@@ -14,7 +15,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 32px;
-  width: 50%;
+  width: 60%;
   background-color: hsl(0, 0%, 40%);
   border-radius: 10px;
 }
@@ -27,26 +28,119 @@
 #leftUserIconMain {
   height: 80px;
   width: 80px;
-  background-color: blue;
-  border-radius: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: grey;
+  border: 1px solid gray;
+}
+
+#leftUserIconMain img {
+  width: 101%;
+  height: auto;
+  border-radius: 50%; /* Add this to make the image circular */
 }
 
 #leftUsername {
   height: 80px;
-  width: 500px;
+  width: 79%;
   background-color: hsl(0, 0%, 10%);;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+#leftUsername .name{
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+#leftUsername .status{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#leftUsername .status .dot{
+  height: 8px;
+  width: 8px;
+  background-color: rgb(0, 176, 0);
+  border-radius: 50%;
+}
+
+#leftUsername .status .text{
+  font-size: 12px;
+  margin-left: 5px;
+  color: hsl(0, 0%, 70%);
 }
 
 .leftMidBar {
   margin-top: 25px;
   margin-bottom: 25px;
     border: 1px solid gray;
-  height: 60%;
+  height: 100vh;
   width: full;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px 25px;
+  box-sizing: border-box;
 }
 
+.sub{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.topbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.topbar .heading{
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.topbar .sub .text1{
+  font-size: 12px;
+  color: hsl(0, 0%, 60%);
+}
+
+.topbar .sub .text2 a{
+  font-size: 12px;
+  color: hsl(270, 74%, 67%);
+}
+.groupContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 10%);
+  align-items: center;
+  justify-content: flex-start;
+}
+.groupContainer .logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: grey;
+}
+.groupContainer .name{
+  margin-left: 20px;
+  font-size: 19px;
+  font-weight: 400;
+  color: hsl(0, 0%, 90%);
+
+}
 .leftBottomBar {
   background-color: hsl(0, 0%, 10%);;
   height: 20%;
