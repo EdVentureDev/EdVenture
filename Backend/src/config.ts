@@ -1,3 +1,3 @@
-const JWT_SECRET = "JWT_SECRET"
+const JWT_SECRET = "MYSECRETKEY"
 
 export default JWT_SECRET;
