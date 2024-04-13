@@ -1,8 +1,10 @@
-import express from "express";
+import express, { json } from "express";
 import zod from "zod";
 import argon from "argon2";
 import { User } from "../db";
 import { getGeneratedOTP, sendOTP } from "./OTP";
+import jwt from "jsonwebtoken"
+import JWT_SECRET from "../config";
 const router = express.Router();
 
 async function hashPassword(password: string) {
@@ -11,6 +13,14 @@ async function hashPassword(password: string) {
 
 async function passwordVerify(hashedPassword: string, plainPassword: string) {
   return await argon.verify(hashedPassword, plainPassword);
+}
+
+async function verifyCookie(cookie: any) {
+  if(cookie == undefined)
+    return false;
+  console.log("Cookie:", cookie)
+  const verify = jwt.verify(cookie,JWT_SECRET)
+  return verify;
 }
 
 const signUpBody = zod.object({
@@ -27,6 +37,19 @@ const otpBody = zod.object({
   otp: zod.number().optional(),
   method: zod.string().optional()
 });
+
+router.post("/checkCookie",async function(req,res)  {
+  const cookie = req.cookies.Authorization;
+  console.log(cookie)
+  if(await verifyCookie(cookie))  {
+    return res.status(200).json({
+      msg: "Log in Success"
+    })
+  }
+  return res.status(400).json({
+    msg:" Do Login"
+  })
+})
 
 router.post("/getotp", async function (req, res) {
   const parsedBody = otpBody.safeParse(req.body);
@@ -108,6 +131,12 @@ const signInBody = zod.object({
 });
 
 router.post("/signin", async function (req, res) {
+  const cookie = req.cookies.Authorization
+  if((await verifyCookie(cookie)))
+    return res.status(200).json({
+  msg: "Log In Success"
+  })
+
   const body = req.body;
   const parsedBody = signInBody.safeParse(body);
 
@@ -127,7 +156,7 @@ router.post("/signin", async function (req, res) {
       msg: "User Not Found",
     });
   }
-
+  const username = body.username
   if (
     hashedPassword != undefined &&
     !(await passwordVerify(hashedPassword, body.password))
@@ -136,8 +165,27 @@ router.post("/signin", async function (req, res) {
       msg: "Invalid Password",
     });
   } else {
+    console.log("JWT SIGNS")
+    const token = jwt.sign(
+      {
+        username
+      },
+      JWT_SECRET
+    )
+
+    res.cookie('Authorization', token, {
+      maxAge: 24 * 60 * 60 * 1000, 
+      httpOnly: true,
+      sameSite: 'strict',
+      secure: true,
+      path: '/',
+    });
+    
+    res.cookie("loggedInUsername",username)
+
     return res.status(200).json({
       msg: "Log In Success",
+      token
     });
   }
 });
