@@ -105,6 +105,15 @@ const removeMembersBody = zod.object({
   members: zod.array(zod.string())
 })
 
+router.get("/getmsgs",async function(req,res) {
+  const username = req.query.loggedInUsername
+  
+  const getmsg = await Group.findOne({groupName:"Group2"})
+  res.status(200).json({
+    msgs: getmsg?.messages
+  })
+})
+
 router.put("/removeMembers", async function (req, res) {
   const body = req.body;
   const parsedBody = removeMembersBody.safeParse(body);
