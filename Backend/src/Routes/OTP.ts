@@ -1,14 +1,16 @@
 import nodemailer from 'nodemailer';
 import otpGenerator from 'otp-generator';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'itstrishank@gmail.com',
-            pass: 'jtne qfeg mnry mtis'
-        }
-    });
-    
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASS
+    }
+});
 
 const otpMap = new Map(); // Map to store OTPs associated with user sessions
 
