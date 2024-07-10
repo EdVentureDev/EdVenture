@@ -1,6 +1,17 @@
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
 
-mongoose.connect('mongodb+srv://Trishank:iqv6js8Fi6CUBOkF@cluster0.e8cglhl.mongodb.net/EdVenture')
+dotenv.config();
+
+const databaseUrl = process.env.DATABASE_URL;
+
+mongoose.connect(databaseUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('Database connected successfully'))
+.catch(err => console.error('Database connection error:', err));
+
 
 const UserSchema = new mongoose.Schema({
     firstName: String,
