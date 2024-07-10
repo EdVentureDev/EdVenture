@@ -3,11 +3,6 @@
   "scripts": {
     "Frontend": "cd EdVenture-FrontEnd && ng serve",
     "Backend": "cd Backend && npx tsc && cd dist && node index.js",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "db:generate": "cd packages/db && npx prisma generate && cd ../..",
-    "start-user-app": "cd ./apps/user-app && npm run start"
-
   },
   "dependencies": {
     "@types/argon2": "^0.15.0",
