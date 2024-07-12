@@ -15,7 +15,7 @@ export class DashboardNavComponent {
   constructor(public http: HttpClient, private router: Router) { }
 
   logout() {
-    this.http.get("http://localhost:3000/api/v1/user/logout",{withCredentials:true}).subscribe(
+    this.http.get("http://edventure.azurewebsites.net/api/v1/user/logout",{withCredentials:true}).subscribe(
       () => {
         // Success: delete all cookies for domain 'localhost' and path '/'
         // Assuming you're using ngx-cookie-service
