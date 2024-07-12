@@ -23,6 +23,7 @@
     "jsonwebtoken": "^9.0.2",
     "nodemailer": "^6.9.13",
     "otp-generator": "^4.0.1",
+    "typescript": "^5.5.3",
     "ws": "^8.16.0",
     "zod": "^3.22.4"
   }
