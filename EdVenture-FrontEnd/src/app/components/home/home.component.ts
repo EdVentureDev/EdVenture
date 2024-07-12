@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
       },
       (error: any) => {
         // Handle error here
-        console.error(error);
+        console.log("NO COOKIE FOUND");
       }
     );
   }
