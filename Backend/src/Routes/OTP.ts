@@ -5,11 +5,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL,
-        pass: process.env.EMAIL_PASS
-    }
+  host: "smtp.naver.com",
+  port: 587,
+  secure: false, // upgrade later with STARTTLS
+  auth: {
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD,
+  },
 });
 
 const otpMap = new Map(); // Map to store OTPs associated with user sessions
@@ -35,7 +37,7 @@ export function sendOTP(userIdentifier: string,method:string) {
     }
 
     const mailOptions = {
-        from: 'itstrishank@gmail.com',
+        from: 'ed-venture@naver.com',
         to: userIdentifier,
         subject: 'Your OTP',
         html: `<div style="display: flex;background-color:black; justify-content: center; align-items: center; height: 1000px; width: 1000px; color: grey; margin: 0 auto; flex-direction: column; font-family: 'Roboto', Arial, sans-serif; padding: 55px; overflow: auto;">

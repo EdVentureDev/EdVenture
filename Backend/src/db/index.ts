@@ -1,14 +1,13 @@
+require('dotenv').config();
 import mongoose from "mongoose";
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const databaseUrl = process.env.DATABASE_URL;
 
-mongoose.connect(databaseUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+if (!databaseUrl) {
+  throw new Error('DATABASE_URL is not defined in the environment variables');
+}
+
+mongoose.connect(databaseUrl)
 .then(() => console.log('Database connected successfully'))
 .catch(err => console.error('Database connection error:', err));
 
