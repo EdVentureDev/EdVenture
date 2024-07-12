@@ -2,7 +2,8 @@
   "name": "edventure",
   "scripts": {
     "Frontend": "cd EdVenture-FrontEnd && ng serve",
-    "Backend": "cd Backend && npx tsc && cd dist && node index.js"
+    "Backend": "cd Backend && npx tsc && cd dist && node index.js",
+    "build": "cd Backend && npx tsc"
   },
   "dependencies": {
     "@types/argon2": "^0.15.0",
