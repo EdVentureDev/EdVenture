@@ -4,7 +4,7 @@ import argon from "argon2";
 import { User } from "../db";
 import { getGeneratedOTP, sendOTP } from "./OTP";
 import jwt from "jsonwebtoken"
-import JWT_SECRET from "../config";
+const JWT_SECRET = require( "../config");
 const router = express.Router();
 
 async function hashPassword(password: string) {
