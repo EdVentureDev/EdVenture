@@ -32,7 +32,7 @@ export class LoginComponent {
             this.body.username = form.value.email;
             this.body.password = form.value.password;
             this.http
-                .post('http://edventure.azurewebsites.net/api/v1/user/signin', this.body, {withCredentials: true})
+                .post('http://localhost:3000/api/v1/user/signin', this.body, {withCredentials: true})
                 .subscribe((response: any) => {       
                     this.state = response.msg;
                     if(this.state == "Log In Success"){

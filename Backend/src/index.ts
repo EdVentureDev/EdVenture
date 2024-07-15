@@ -10,6 +10,6 @@ app.use(express.json())
 app.use(cookieparser())
 app.use("/api/v1",rootRouter)
 
-app.listen(process.env.PORT || 8080, function() {
-    console.log(`Listening on Port: ${process.env.PORT || 8080}`);
-});
+app.listen(3000,function()  {
+    console.log("Listening on Port: 3000")
+})
