@@ -28,7 +28,7 @@ export class ChatComponent implements OnInit {
 
     setInterval(() => {
       this.http
-        .get<{ msgs: any[] }>('http://localhost:3000/api/v1/group/getmsgs', {
+        .get<{ msgs: any[] }>('http://edventure.azurewebsites.net/api/v1/group/getmsgs', {
           params: { loggedInUsername: this.loggedInUsername }
         })
         .subscribe({
@@ -52,7 +52,7 @@ export class ChatComponent implements OnInit {
     }; // create the body of the request
 
     this.http
-      .post('http://localhost:3000/api/v1/group/msgGroup', body)
+      .post('http://edventure.azurewebsites.net/api/v1/group/msgGroup', body)
       .subscribe({
         next: (response) => {
           console.log('Message sent:', response);
