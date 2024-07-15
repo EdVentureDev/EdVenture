@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   checkCookie(): void {
-    this.http.post("http://localhost:3000/api/v1/user/checkCookie", {}, {withCredentials: true}).subscribe(
+    this.http.post("http://edventure.azurewebsites.net/api/v1/user/checkCookie", {}, {withCredentials: true}).subscribe(
       (response: any) => {
         if(response.msg == "Log in Success")
           this.router.navigate(['/dashboard'])
