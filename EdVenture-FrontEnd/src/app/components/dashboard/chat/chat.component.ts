@@ -26,20 +26,20 @@ export class ChatComponent implements OnInit {
 
     this.loggedInUsername = this.cookieService.get('loggedInUsername');
 
-    setInterval(() => {
-      this.http
-        .get<{ msgs: any[] }>('http://edventure.azurewebsites.net/api/v1/group/getmsgs', {
-          params: { loggedInUsername: this.loggedInUsername }
-        })
-        .subscribe({
-          next: (response) => {
-            this.messages = response.msgs; // Changed from response.messages to response.msgs
-          },
-          error: (error) => {
-            console.error('Error fetching messages:', error);
-          }
-        });
-    }, 1000);
+    // setInterval(() => {
+    //   this.http
+    //     .get<{ msgs: any[] }>('https://edventure.azurewebsites.net/api/v1/group/getmsgs', {
+    //       params: { loggedInUsername: this.loggedInUsername }
+    //     })
+    //     .subscribe({
+    //       next: (response) => {
+    //         this.messages = response.msgs; // Changed from response.messages to response.msgs
+    //       },
+    //       error: (error) => {
+    //         console.error('Error fetching messages:', error);
+    //       }
+    //     });
+    // }, 1000);
   }
 
   sendMessage() {
@@ -52,7 +52,7 @@ export class ChatComponent implements OnInit {
     }; // create the body of the request
 
     this.http
-      .post('http://edventure.azurewebsites.net/api/v1/group/msgGroup', body)
+      .post('https://edventure.azurewebsites.net/api/v1/group/msgGroup', body)
       .subscribe({
         next: (response) => {
           console.log('Message sent:', response);

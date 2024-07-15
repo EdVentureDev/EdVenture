@@ -65,7 +65,7 @@ export class SignupComponent {
         this.userData.email = email;
         this.setotp.email = email;
         this.http
-            .post('http://edventure.azurewebsites.net/api/v1/user/getotp', body)
+            .post('https://edventure.azurewebsites.net/api/v1/user/getotp', body)
             .subscribe((response: any) => {
                 this.state = response.msg;
             });
@@ -86,7 +86,7 @@ export class SignupComponent {
             this.setotp.method = 'signup';
             // Send a request to the server to verify the OTP
             this.http
-                .post('http://edventure.azurewebsites.net/api/v1/user/verifyotp', this.setotp)
+                .post('https://edventure.azurewebsites.net/api/v1/user/verifyotp', this.setotp)
                 .subscribe((response: any) => {
                     console.log(response);
                     this.state = response.msg;
@@ -101,7 +101,7 @@ export class SignupComponent {
         if (form.valid) {
             this.userData.educational_institute = form.value.college;
             this.http
-                .post('http://edventure.azurewebsites.net/api/v1/user/signup', this.userData)
+                .post('https://edventure.azurewebsites.net/api/v1/user/signup', this.userData)
                 .subscribe((response: any) => {
                     this.state = response.msg;
                     console.log(response)
