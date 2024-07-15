@@ -7,7 +7,7 @@ dotenv.config();
 let transporter = nodemailer.createTransport({
   host: "smtp.naver.com",
   port: 587,
-  secure: false, // upgrade later with STARTTLS
+  secure: false,
   auth: {
     user: process.env.EMAIL_USERNAME,
     pass: process.env.EMAIL_PASSWORD,
