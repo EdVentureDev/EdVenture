@@ -70,6 +70,7 @@
             <form #otpForm="ngForm" (ngSubmit)="onGetOtp(otpForm)">
                 <input name="email" ngModel #email="ngModel" type="email" placeholder="Email" required>
                 <p *ngIf="formSubmitted && email.invalid" style="color: rgb(150, 24, 24); font-size: 13px;">Email is required.</p>
+                <button type="button" (click)="step = step - 1">Previous</button>
                 <button type="submit" (click)="getOtp(email.value)">Get OTP</button>
             </form>
         </div>
@@ -98,6 +99,7 @@
         <div class="rightContainer" *ngIf="step === 3">
             <form #otpForm="ngForm" (ngSubmit)="onSubmitOtp(otpForm)">
                 <input name="otp" ngModel #otp="ngModel" type="password" placeholder="Enter OTP">
+                <button type="button" (click)="step = step - 1">Previous</button>
                 <button type="submit" [disabled]="!otpForm.valid">Verify</button>
             </form>
         </div>
@@ -130,6 +132,7 @@
                     <option value="Lovely professional university (phagwara)">Lovely professional university (phagwara)
                     </option>
                 </select>
+                <button type="button" (click)="step = step - 1">Previous</button>
                 <button type="submit" [disabled]="!otpForm.valid">Next</button>
             </form>
         </div>

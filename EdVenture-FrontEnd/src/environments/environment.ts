@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    enableHttpRequests: false, // Disable HTTP requests for production
+    enableHttpRequests: true, // Disable HTTP requests for production
   };
   
