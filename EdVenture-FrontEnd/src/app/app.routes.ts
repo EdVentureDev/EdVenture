@@ -18,7 +18,7 @@ import { DashboardResourcesComponent } from './components/dashboard/dashboard-re
 
 
 export const routes: Routes = [
-  { title: 'EdVenture | Home', path: '', redirectTo: 'home', pathMatch: 'full'},
+  { title: 'EdVenture | Home', path: '', component: HomeComponent},
   { title: 'EdVenture | Home', path: 'home', component: HomeComponent },
   { title: 'EdVenture | About', path: 'about', component: AboutComponent },
   { title: 'EdVenture | Contact', path: 'contact', component: ContactComponent },
