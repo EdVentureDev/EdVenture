@@ -4,8 +4,9 @@ import argon from "argon2";
 import { User } from "../db";
 import { getGeneratedOTP, sendOTP } from "./OTP";
 import jwt from "jsonwebtoken"
-const JWT_SECRET = require( "../config");
+const env = require("../config");
 const router = express.Router();
+const JWT_SECRET = env.JWT_SECRET
 
 async function hashPassword(password: string) {
   return await argon.hash(password);
@@ -14,8 +15,6 @@ async function hashPassword(password: string) {
 async function passwordVerify(hashedPassword: string, plainPassword: string) {
   return await argon.verify(hashedPassword, plainPassword);
 }
-
-
 
 async function verifyCookie(cookie: any) {
   if(cookie == undefined)
