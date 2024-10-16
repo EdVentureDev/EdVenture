@@ -5,7 +5,7 @@ import cookieparser from "cookie-parser"
 
 const app = express();
 
-app.use(cors({ credentials: true, origin: true }));
+app.use(cors());
 app.use(express.json())
 app.use(cookieparser())
 app.use("/api/v1",rootRouter)
